@@ -1,5 +1,4 @@
 from seleniumpagefactory.Pagefactory import PageFactory
-from selenium import webdriver
 
 import logging
 
@@ -20,7 +19,6 @@ class LogInPage(PageFactory):
         self.logger = logging.getLogger(self.__class__.__name__)
         self.driver = driver
         self.timeout = 30
-        self.highlight = True
 
     def fillUsername(self, username):
         self.usernameInput.set_text(username)
