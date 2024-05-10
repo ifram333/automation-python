@@ -15,4 +15,5 @@ class Persona():
 
 
 p = Persona("Nata", "34")
+p.altura = 20
 print(p, p.altura)

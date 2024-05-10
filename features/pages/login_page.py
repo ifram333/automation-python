@@ -1,13 +1,9 @@
-from seleniumpagefactory.Pagefactory import PageFactory
+from features.pages.base_page import BasePage
 
 import logging
 
-logging.basicConfig(level=logging.INFO,
-                    format='%(asctime)s.%(msecs)03d %(levelname)s %(name)s.%(funcName)s :: %(message)s',
-                    datefmt='%H:%M:%S')
 
-
-class LogInPage(PageFactory):
+class LogInPage(BasePage):
 
     locators = {
         "usernameInput": ('ID', 'user-name'),
@@ -16,9 +12,8 @@ class LogInPage(PageFactory):
     }
 
     def __init__(self, driver):
+        super().__init__(driver)
         self.logger = logging.getLogger(self.__class__.__name__)
-        self.driver = driver
-        self.timeout = 30
 
     def fillUsername(self, username):
         self.usernameInput.set_text(username)
