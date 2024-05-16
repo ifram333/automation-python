@@ -45,5 +45,45 @@ class generate_power():
     def power(self, base) -> int:
         return base ** self.exponent
 
+
+# 4. 
+
+def mean():
+    sample = []
+    def inner_mean(number):
+        sample.append(number)
+        return sum(sample) / len(sample)
+    return inner_mean
+
+# 5.
+
+def add_messages(func):
+    def inner_add_messages():
+        print("Inicio del decorador")
+        func()
+        print("Adios")
+    return inner_add_messages
+
+def debug(func):
+    def inner_debug(*args, **kwargs):
+        result = func(*args, **kwargs)
+        print(f"{func.__name__} (args: {args}, kwargs: {kwargs}) -> {result}")
+        return result
+    return inner_debug
+
+@debug
+def sumar(*args, **kwargs) -> int:
+    temp = 0
+    for arg in args:
+        temp = temp + arg
+
+    for k, v in kwargs.items():
+        temp = temp + v
+
+    return temp
+
 if __name__ == "__main__":
-    print(generate_power(3)(2))
+    sumar(3, 5, num = 9)
+    sumar(3, 5, 2, 5, num = 9)
+    sumar(num1 = 9, num2 = 8)
+
