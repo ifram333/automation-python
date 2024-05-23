@@ -1,0 +1,43 @@
+Clases.
+
+1. Escribir una clase en python que convierta un número entero a número romano
+
+2. Escribir una clase en python que convierta un número romano en un número entero
+
+3. Escribir una clase en python que obtenga todos los posibles subconjuntos únicos de un conjunto de números enteros distintos.
+Entrada: [4, 5, 6]
+Salida: [[], [6], [5], [5, 6], [4], [4, 6], [4, 5], [4, 5, 6]]
+
+4. Escribir una clase en python que encuentre los 3 elementos que sumen 0 a partir de números reales
+Entrada: [-25, -10, -7, -3, 2, 4, 8, 10]
+Salida: [[-10, 2, 8], [-7, -3, 10]]
+
+Inner functions.
+
+1. Escribir una función que reciba otra función booleana y una lista, y devuelva otra lista con los elementos de la lista que devuelvan True al aplicarles la función booleana.
+
+2. Escribir una función que reciba una frase y devuelva un diccionario con las palabras que contiene y su longitud.
+Entrada: "Hola mundo"
+Salida: { "Hola": 4, "mundo": 5}
+
+List Comprenhension
+
+1. Crear una lista con los cuadrados de los números del 1 al 100.
+
+2. Crear una lista con las letras que se repiten en dos strings.
+Entrada: a = "hola", b = "mundo"
+Salida: ["o"]
+
+3. Crear un CONJUNTO con los elementos que sean múltiplos de 3 de una lista de entrada. Esto es Set Comprenhension
+Entrada: numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+Salida: {3, 6, 9}
+
+4. Crear un diccionario con las letras de una palabra y su frecuencia utilizando una dictionary comprehension.
+Entrada: name = "ejemplo"
+Salida: {"e": 2, "j": 1, "m": 1, "p": 1, "l": 1, "o": 1}
+
+Backtracking
+
+1. Imprimir todas las permutaciones posibles de una entrada.
+Entrada: "abcdefg"
+Salida: ["abcdefg", "abcdegf", "abcdfeg", ...]
